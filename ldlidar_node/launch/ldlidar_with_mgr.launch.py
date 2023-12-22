@@ -25,6 +25,8 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
+
+
     # Set LOG format
     os.environ['RCUTILS_CONSOLE_OUTPUT_FORMAT'] = '{time} [{severity}] ({name}) {message}'
     os.environ['RCUTILS_COLORIZED_OUTPUT'] = '1'
@@ -54,7 +56,7 @@ def generate_launch_description():
         parameters=[
             # YAML files
             lc_mgr_config_path  # Parameters
-        ]
+        ],
     )
 
     # Include LDLidar launch
@@ -65,8 +67,12 @@ def generate_launch_description():
         ]),
         launch_arguments={
             'node_name': node_name
-        }.items()
+        }.items(),
+
+
     )
+
+   
 
     # Define LaunchDescription variable
     ld = LaunchDescription()

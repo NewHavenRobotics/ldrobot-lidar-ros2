@@ -1,6 +1,7 @@
-<?xml version="1.0"?>
-
 <robot name="ldlidar">
+    <link name="base_footprint">
+        <!-- Add any visual, geometry, material information for the base footprint here -->
+    </link>
 
     <link name="ldlidar_base">
         <visual>
@@ -14,12 +15,19 @@
         </visual>
     </link>
 
+    <joint name="ldlidar_base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="ldlidar_base"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <link name="ldlidar_link" />
     <joint name="ldlidar_link_joint" type="fixed">
         <parent link="ldlidar_base"/>
         <child link="ldlidar_link"/>
         <origin xyz="0 0 0.02745" rpy="0 0 0" />
     </joint>
 
-    <link name="ldlidar_link" />
+    <!-- You can add more links, joints, etc., as children of base_footprint here -->
 
 </robot>
