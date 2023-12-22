@@ -1,3 +1,18 @@
+
+# This package is to use the lidar we have. The readme below has lots of information. Heres a quickstart
+
+clone the repo into your ros2_ws
+
+    colcon build --symlink-install
+
+then start it up
+
+    ros2 launch ldlidar_node ldlidar_with_mgr.launch.py
+
+
+### --- everything below here is the original readme ---
+
+
 <h1 align="center">
   ldrobot-lidar-ros2
 </h1>
